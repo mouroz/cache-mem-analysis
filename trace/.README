@@ -1,0 +1,12 @@
+# TRACE GENERATOR
+
+A single assembly has been used to generate the trace in ./write_array.asm
+
+The memory instructions were then interpreted from it. The logic can be seen at ./write_array_aux
+
+The final template used for conversion can be seen at ./template.txt
+The template is text sensitive and does not accept any descriptions
+
+./convert.py is used to generate the the trace file from the template
+
+./trace.txt is the generated trace
