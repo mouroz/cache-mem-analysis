@@ -2,7 +2,7 @@ IF 0
 IF 1
 IF 2
 IF 3
-DF 63
+DF [N]
 loop:
 IF 4
 IF 5
@@ -21,13 +21,13 @@ endloop
 IF 11
 IF 12
 IF 13
-DF 63
+DF [N]
 loop:
 IF 14
-DF [I]
+DF [I] 
 IF 15
 IF 16
-DW [I]
+DW [I] 
 IF 17
 IF 23
 IF 24

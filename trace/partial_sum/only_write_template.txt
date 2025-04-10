@@ -1,0 +1,22 @@
+IF 0
+IF 1
+IF 2
+DF [N]
+loop:
+IF 3
+DF [I]
+IF 4
+IF 5
+DW [I]
+IF 6
+IF 7
+IF 8
+IF 9
+IF 10
+IF 11
+IF 12 
+IF 13
+IF 14
+endloop
+IF 15
+IF 16

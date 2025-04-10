@@ -14,7 +14,7 @@ with open(template_file, "r") as file:
     lines = file.readlines()
 
 i = 0
-
+n = 32
 
 with open(output_filename, "w") as output_file:
     while i < len(lines):
@@ -30,13 +30,13 @@ with open(output_filename, "w") as output_file:
                 i += 1  # Move past "endloop"
 
             loop = loop_builder.getvalue()
-            for j in range(31, 64):
+            for j in range(0, n):
                 modified_trace = loop.replace("[I]", f"{j}").replace("IF", "2").replace("DF", "0").replace("DW", "1") 
                 output_file.write(modified_trace)  # Add spacing between traces
 
 
         elif lines[i].strip() != "": 
-            modified_trace = lines[i].replace("IF", "2").replace("DF", "0").replace("DW", "1")  # Convert IF, DF, DW
+            modified_trace = lines[i].replace("[N]", f"{n}").replace("IF", "2").replace("DF", "0").replace("DW", "1")  # Convert IF, DF, DW
             output_file.write(modified_trace)  # Add spacing between traces
         
         i += 1

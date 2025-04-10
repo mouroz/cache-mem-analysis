@@ -1,16 +1,18 @@
-# DESCRIPTION
-Simulation of instruction fetch for a simple assembly line program that adds an already present array to memory
+## DESCRIPTION
+# Writes a arithmetic sequence on the array, 
+# and use it to overwrite the array with a accumalated sum sequence of the array 
+# Explores sequential data access, loops and jal on code  
 
 
-# TODO
-Writes after reads
-Read after write 
-Random array access
+## TODO
+# Writes after reads
+# Read after write 
+# Random array access
 
 
 .data
-array:  .word 0:32
-n:      .word 32
+n:      .word 0
+array:  .word 1:32
 
 .text
 .globl main
