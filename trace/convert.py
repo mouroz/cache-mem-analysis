@@ -13,8 +13,9 @@ output_filename = sys.argv[2]
 with open(template_file, "r") as file:
     lines = file.readlines()
 
-i = 0
-n = 32
+i = 1
+n = 60
+skip_factor = 2
 
 with open(output_filename, "w") as output_file:
     while i < len(lines):
@@ -30,7 +31,7 @@ with open(output_filename, "w") as output_file:
                 i += 1  # Move past "endloop"
 
             loop = loop_builder.getvalue()
-            for j in range(0, n):
+            for j in range(1, n, skip_factor):
                 modified_trace = loop.replace("[I]", f"{j}").replace("IF", "2").replace("DF", "0").replace("DW", "1") 
                 output_file.write(modified_trace)  # Add spacing between traces
 

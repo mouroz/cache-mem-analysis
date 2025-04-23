@@ -1,0 +1,82 @@
+# ALGORITHM DESCRIPTION
+Consider the array already contains written values
+Runs for each element on the array (left to right):
+- Add a factor value to the current value, and rewrite it
+- Jump function calls are called on further strain memory
+
+Skipping could be also considered
+
+
+
+ 
+
+
+<DATA>
+    .data
+    n:      .word 0   
+    array:  .word 1:N #Any value here
+
+
+    .text
+    .globl main
+</DATA>
+
+
+<CODE>
+  # ADD FACTOR TO ALL ELEMENTS ON ARRAY
+  redefineVariables:
+  la t0, word # Address
+  la t1, n # Size
+  addi t2, $zero, 4 # Factor 
+
+  loopRead:
+    lw t3, 0(a1)
+    add a0, t2, t3
+    sw a0, 0(t0) # WRITE AFTER MODIFY
+  
+    jal print_register # Print new value
+
+    addi t1, t1, 4
+    bne t2, $zero, loopRead
+
+  
+  j .end
+
+
+  print_register:
+    addi a7, a0, $zero # Load to system register          
+    ecall              # Custom call for printing
+
+    ret               # Return to caller
+
+  end:
+    # (EMPTY INSTRUCTION - END)
+
+<CODE>
+
+
+
+<MEM>
+  IF 0
+  DF 0
+  IF 1
+  DF 1
+  IF 2
+  
+  <arr-loop>
+    IF 3
+    IF 4
+    DW [I] 
+    IF 5
+    <jal-print>
+      IF 8
+      IF 9
+      IF 10
+    </jal-print>
+    IF 6
+    IF 7
+  </arr-loop>
+  IF 11
+</MEM>
+
+
