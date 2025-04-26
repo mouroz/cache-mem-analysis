@@ -15,19 +15,9 @@
     </CPU>
     <MainMemory>
         <blockSize>1</blockSize>
-        <memorySize>64</memorySize>
+        <memorySize>96</memorySize>
         <ciclesPerAccessRead>1</ciclesPerAccessRead>
         <ciclesPerAccessWrite>2</ciclesPerAccessWrite>
         <timeCicle>10</timeCicle>
     </MainMemory>
-	<VirtualMemory>
-        <pageSize>4</pageSize>
-        <diskMemorySize>32</diskMemorySize>
-        <diskCiclesPerAccessRead>1</diskCiclesPerAccessRead>
-        <diskCiclesPerAccessWrite>2</diskCiclesPerAccessWrite>
-        <timeCicle>100</timeCicle>
-        <pageTableReplacementAlgorithm>FIFO</pageTableReplacementAlgorithm>
-        
-		<TLBType>none</TLBType>
-	</VirtualMemory>
 </AmnesiaConfiguration>
