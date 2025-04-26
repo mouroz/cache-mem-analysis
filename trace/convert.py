@@ -14,7 +14,7 @@ with open(template_file, "r") as file:
     lines = file.readlines()
 
 i = 1
-n = 60
+n = 90
 skip_factor = 2
 
 with open(output_filename, "w") as output_file:
