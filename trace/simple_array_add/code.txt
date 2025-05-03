@@ -37,7 +37,7 @@ Skipping could be also considered
     jal print_register # Print new value
 
     addi t1, t1, 4
-    bne t2, $zero, loopRead
+    bne t1, $zero, loopRead
 
   
   j .end
